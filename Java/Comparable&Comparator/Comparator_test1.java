@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+@SuppressWarnings("WrongPackageStatement")
 public class Comparator_test1 {
     public static void main(String[] args) {
         List<Employee1> list = new ArrayList<>();

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class Comparable_test2 {
     public static void main(String[] args) {
         List<Employee> list = new ArrayList<>();
