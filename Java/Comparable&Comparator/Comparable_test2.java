@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Comparator_test1 {
+public class Comparable_test2 {
     public static void main(String[] args) {
-        List<Employee1> list = new ArrayList<>();
-        Employee1 emp1 = new Employee1(100, "Zaur", "Tregulov", 12345);
-        Employee1 emp2 = new Employee1(15, "Ivan", "Petrov", 6542);
-        Employee1 emp3 = new Employee1(123, "Ivan", "Sidorov", 8543);
+        List<Employee> list = new ArrayList<>();
+        Employee emp1 = new Employee(100, "Zaur", "Tregulov", 12345);
+        Employee emp2 = new Employee(15, "Ivan", "Petrov", 6542);
+        Employee emp3 = new Employee(123, "Ivan", "Sidorov", 8543);
 
         list.add(emp1);
         list.add(emp2);
@@ -24,13 +24,13 @@ public class Comparator_test1 {
     }
 }
 
-class Employee1 implements Comparable<Employee1> {
+class Employee implements Comparable<Employee> {
     int id;
     String name;
     String surname;
     int salary;
 
-    public Employee1(int id, String name, String surname, int salary) {
+    public Employee(int id, String name, String surname, int salary) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -39,7 +39,7 @@ class Employee1 implements Comparable<Employee1> {
 
     @Override
     public String toString() {
-        return "Employee1{" +
+        return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
@@ -48,14 +48,8 @@ class Employee1 implements Comparable<Employee1> {
     }
 
     @Override
-    public int compareTo(Employee1 anotherEmp) {
-//        return Integer.compare(this.id, anotherEmp.id);
-//        return this.salary - anotherEmp.salary; // результат тот же
-//        return this.name.compareTo(anotherEmp.name); // для String
-        int res = this.name.compareTo(anotherEmp.name);
-        if (res == 0) {
-            res = this.surname.compareTo(anotherEmp.surname);
-        }
-        return res;
+    public int compareTo(Employee anotherEmp) {
+        return Integer.compare(this.id, anotherEmp.id);
     }
 }
+
